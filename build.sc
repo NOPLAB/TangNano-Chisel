@@ -7,7 +7,7 @@ import scalalib._
 // support BSP
 import mill.bsp._
 
-object TangNano-Chisel extends SbtModule { m =>
+object TangNanoChisel extends SbtModule { m =>
   override def millSourcePath = os.pwd
   override def scalaVersion = "2.13.8"
   override def scalacOptions = Seq(
@@ -25,7 +25,8 @@ object TangNano-Chisel extends SbtModule { m =>
   )
   object test extends Tests with ScalaTest {
     override def ivyDeps = m.ivyDeps() ++ Agg(
-      ivy"edu.berkeley.cs::chiseltest:0.5.4"
+      ivy"edu.berkeley.cs::chiseltest:0.5.4",
+      ivy"edu.berkeley.cs::chisel-iotesters:2.5.0"
     )
   }
 }
