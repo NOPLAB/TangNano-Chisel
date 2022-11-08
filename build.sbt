@@ -11,7 +11,8 @@ lazy val root = (project in file("."))
     name := "TangNano-Chisel",
     libraryDependencies ++= Seq(
       "edu.berkeley.cs" %% "chisel3" % chiselVersion,
-      "edu.berkeley.cs" %% "chiseltest" % "0.5.4" % "test"
+      "edu.berkeley.cs" %% "chiseltest" % "0.5.4" % "test",
+      "edu.berkeley.cs" %% "chisel-iotesters" % "2.5.0"
     ),
     scalacOptions ++= Seq(
       "-language:reflectiveCalls",
@@ -22,4 +23,3 @@ lazy val root = (project in file("."))
     ),
     addCompilerPlugin("edu.berkeley.cs" % "chisel3-plugin" % chiselVersion cross CrossVersion.full),
   )
-
