@@ -20,11 +20,12 @@ class SynthesizerTop(var count: Int) extends Module {
 
   when(counter.value === 0.U)
   {
-    io.speaker := ~io.speaker
+    reg := ~reg
   } .otherwise
   {
-    io.speaker := io.speaker
+    reg := reg
   }
+  io.speaker := reg
 }
 
 class SynthesizerTopWrapper extends RawModule {
