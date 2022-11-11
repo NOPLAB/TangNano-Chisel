@@ -1,4 +1,4 @@
-TangNano-Chisel
+TangNanoChisel
 =======================
 
 This project is an FPGA of Tang Nano with Chisel.
